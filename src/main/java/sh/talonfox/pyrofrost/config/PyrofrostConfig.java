@@ -33,4 +33,6 @@ public class PyrofrostConfig implements ConfigData {
     @Comment("Sets a piece of Netherite Armor's Radiation Resistance Modifier")
     @ConfigEntry.BoundedDiscrete(min=0L,max=100L)
     public long Server_NetheriteArmor_Resistance = 20L;
+    @Comment("Multiplies all temperature changing rates")
+    public float Server_Temperature_ChangeRate = 1.f;
 }

@@ -357,6 +357,7 @@ public class Temperature {
             if (serverPlayer.inPowderSnow && this.skinTemp >= NORMAL) {
                 tempChange = -((this.skinTemp - NORMAL) / 10.0F);
             }
+            tempChange *= Pyrofrost.CONFIG.Server_Temperature_ChangeRate;
             this.skinTemp += tempChange;
             final TemperatureDirection coreTempDir = getCoreTemperatureDirection(oldSkinTemp, this.coreTemp, this.skinTemp);
             float diff = Math.abs(this.skinTemp - this.coreTemp);
